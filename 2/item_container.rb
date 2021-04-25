@@ -45,9 +45,9 @@ module ItemContainer
     end
 
     private
-    
+
     def show_all_item_with_name(name)
-      @items.map { |i| i if name = i.name }.compact
+      @items.map { |i| i.to_s if name == i.name }.compact
     end
   end
 

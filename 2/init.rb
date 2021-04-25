@@ -1,11 +1,17 @@
-require_relative 'cart'
-require_relative 'item'
-require_relative 'virtual_item'
-require_relative 'real_item'
-require_relative 'item_container'
-require_relative 'order'
-require_relative 'antique_item'
-require_relative 'string'
+require_relative "store_application"
+StoreApplication.set do |app|
+  app.name = 'Ruby App'
+  app.environment = :development
+  app.admin do |admin|
+    admin.email = 'admin@mail.com'
+    admin.login = 'admin'
+  end
+end
+
+p StoreApplication.environment
+p StoreApplication.name
+p StoreApplication.admin.email
+
 
 @items = []
 # @items << VirtualItem.new({
@@ -18,16 +24,12 @@ require_relative 'string'
 #                         weight: 380,
 #                         name: 'ant'
 #                         })
-@items << RealItem.new({
-                        price: 310,
-                        weight: 30,
-                        name: 'cicle'
-                        })
-@items << RealItem.new({
-                       price: 330,
-                       weight: 20,
-                       name: 'bike'
-                       })
+# @items << VirtualItem.new('cicle', price: 310, weight: 30)
+# @items << AntiqueItem.new('bike', price: 330, weight: 20)
+@items << RealItem.new(name: 'car', price: 300, weight: 330)
+@items << RealItem.new(name: 'doll', price: 360, weight: 430)
+
+
 cart = Cart.new('amg')
 cart.add_item(RealItem.new({
                         price: 310,
@@ -35,19 +37,20 @@ cart.add_item(RealItem.new({
                         name: 'car'
                         }))
 cart.add_item(RealItem.new({
-                        price: 310,
+                        price: 610,
                         weight: 30,
                         name: 'car'
                         }))
 cart.add_item(RealItem.new({
-                        price: 310,
+                        price: 510,
                         weight: 30,
                         name: 'bike'
                         }))
+p cart.send :all_cars
 # p cart.kind_of? Cart
 # p @items.first.kind_of? Item
-p @items.first.respond_to? :price
-p @items.first.send :tax
+# p @items.first.respond_to? :price
+# p @items.first.send :tax
 
 # p cart.all_cars
 # p cart.all_bikes

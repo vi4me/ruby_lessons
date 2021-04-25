@@ -1,3 +1,3 @@
-class AntiqueItem 
+class AntiqueItem #< Item
 
 end

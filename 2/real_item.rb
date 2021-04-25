@@ -4,15 +4,13 @@ class RealItem < Item
 
   def initialize(options)
     @weight = options[:weight]
-    super
+    super(options[:name], options)
   end
 
   def info
     if block_given?
       yield weight
       super
-    else
-      p 'Nothing'
     end
   end
 end
