@@ -6,7 +6,7 @@ class StoreApplication
     def set
       unless @store
         yield self
-        puts 'Loading classes'
+        # puts 'Loading classes'
         require_relative 'cart'
         require_relative 'item'
         require_relative 'virtual_item'
