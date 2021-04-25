@@ -13,4 +13,8 @@ class RealItem < Item
       super
     end
   end
+
+  def to_s
+    super + ":#{self.weight if self.respond_to? :weight}"
+  end
 end
