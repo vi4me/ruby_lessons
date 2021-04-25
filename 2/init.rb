@@ -8,7 +8,12 @@ StoreApplication.set do |app|
     admin.login = 'admin'
   end
 end
-
+unless StoreApplication.frozen?
+  StoreApplication.name = 'New Name'
+  StoreApplication::Admin.email = 'new@gmail.com'
+end
+puts StoreApplication.name
+p StoreApplication::Admin.email
 # p StoreApplication.environment
 # p StoreApplication.name
 # p StoreApplication.admin.email
@@ -51,7 +56,7 @@ cart.add_item(RealItem.new({
 order = Order.new
 @items.each { |i| order.add_item i }
 order.place
-# p cart.send :all_cars
+p cart.send :all_cars
 # p cart.kind_of? Cart
 # p @items.first.kind_of? Item
 # p @items.first.respond_to? :price
