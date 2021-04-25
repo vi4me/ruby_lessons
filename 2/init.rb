@@ -3,14 +3,15 @@ StoreApplication.set do |app|
   app.name = 'Ruby App'
   app.environment = :development
   app.admin do |admin|
-    admin.email = 'admin@mail.com'
+    admin.email = 'vitaliy.cherednichenko113@gmail.com'
+    admin.pass = 'bvme uvrm dney qazm'
     admin.login = 'admin'
   end
 end
 
-p StoreApplication.environment
-p StoreApplication.name
-p StoreApplication.admin.email
+# p StoreApplication.environment
+# p StoreApplication.name
+# p StoreApplication.admin.email
 
 
 @items = []
@@ -46,7 +47,11 @@ cart.add_item(RealItem.new({
                         weight: 30,
                         name: 'bike'
                         }))
-p cart.send :all_cars
+
+order = Order.new
+@items.each { |i| order.add_item i }
+order.place
+# p cart.send :all_cars
 # p cart.kind_of? Cart
 # p @items.first.kind_of? Item
 # p @items.first.respond_to? :price
