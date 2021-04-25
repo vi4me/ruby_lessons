@@ -53,10 +53,18 @@ cart.add_item(RealItem.new({
                         name: 'bike'
                         }))
 
-order = Order.new
-@items.each { |i| order.add_item i }
-order.place
 p cart.send :all_cars
+
+order = Order.new
+order.place
+p order.placed_at
+p order.end_sending
+
+# p order.placed_at.utc
+# p order.placed_at.to_i
+
+# @items.each { |i| order.add_item i }
+
 # p cart.kind_of? Cart
 # p @items.first.kind_of? Item
 # p @items.first.respond_to? :price
