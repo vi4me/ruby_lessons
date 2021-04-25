@@ -1,4 +1,5 @@
-require_relative "store_application"
+require_relative 'store_application'
+
 StoreApplication.set do |app|
   app.name = 'Ruby App'
   app.environment = :development
