@@ -1,0 +1,17 @@
+block_given?
+
+delete_if
+
+respond_to?
+проверка на принадлежность метода
+
+extend
+
+class_eval
+
+'Dasha Masha Pasha'.chars
+'Dasha Masha Pasha'.split
+kind_of?
+compact
+respond_to?
+send      p @items.first.send :tax

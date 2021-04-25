@@ -1,0 +1,3 @@
+class AntiqueItem 
+
+end

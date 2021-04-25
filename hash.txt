@@ -1,0 +1,6 @@
+hash.each_key ключи
+hash.keys
+hash.sort
+
+hash.each_value значения
+hash.reverce_each перевернуть значения
