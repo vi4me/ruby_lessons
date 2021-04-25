@@ -9,8 +9,9 @@ module ItemContainer
 
   module InstanceMethods
 
-    def add_item(item)
-      @items.push item unless item.price < self.class.min_price
+    def add_item(*items)
+      @items += items
+      # .push items unless item.price < self.class.min_price
     end
 
     def remove_item

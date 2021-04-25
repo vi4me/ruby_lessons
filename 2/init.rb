@@ -21,18 +21,18 @@ p StoreApplication::Admin.email
 
 
 @items = []
-# @items << VirtualItem.new({
-#                         price: 250,
-#                         weight: 300,
-#                         name: 'virt'
-#                         })
-# @items << AntiqueItem.new({
-#                         price: 200,
-#                         weight: 380,
-#                         name: 'ant'
-#                         })
-# @items << VirtualItem.new('cicle', price: 310, weight: 30)
-# @items << AntiqueItem.new('bike', price: 330, weight: 20)
+@items << VirtualItem.new({
+                        price: 250,
+                        weight: 300,
+                        name: 'virt'
+                        })
+@items << AntiqueItem.new({
+                        price: 200,
+                        weight: 380,
+                        name: 'ant'
+                        })
+@items << VirtualItem.new('cicle', price: 310, weight: 30)
+@items << AntiqueItem.new('bike', price: 330, weight: 20)
 @items << RealItem.new(name: 'car', price: 300, weight: 330)
 @items << RealItem.new(name: 'doll', price: 360, weight: 430)
 

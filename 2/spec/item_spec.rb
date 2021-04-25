@@ -1,6 +1,6 @@
 require 'rspec'
-require_relative 'item'
-require_relative 'virtual_item'
+require_relative '../item'
+require_relative '../virtual_item'
 
 describe Item do
   it 'calculates correctly price' do
