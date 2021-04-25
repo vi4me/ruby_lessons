@@ -6,11 +6,14 @@ require_relative '../antique_item'
 require_relative '../real_item'
 
 describe Cart do
-  it 'add items to cart' do
-    cart = Cart.new('Dasha')
-    item1 = Item.new('car', price: 300)
-    item2 = Item.new('bike', price: 500)
-    cart.add_item(item1, item2)
-    expect(cart.items).to include(item1, item2)
+  context 'Add items' do
+    it 'add items to cart' do
+      cart = Cart.new('Dasha')
+      item1 = Item.new('car', price: 300)
+      item2 = Item.new('bike', price: 500)
+      cart.add_item(item1, item2)
+      expect(cart.items).to include(item1, item2)
+    end
   end
+  it 'removes items later'
 end
