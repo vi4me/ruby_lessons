@@ -41,6 +41,12 @@ class Item
     real_price = value
   end
 
+  def self.show_info_about(attribue, block)
+    @@show_info_about ||= {}
+    @@show_info_about[attribue] = block
+
+  end
+
   private
 
   def tax
