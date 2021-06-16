@@ -15,3 +15,7 @@ kind_of?
 compact
 respond_to?
 send      p @items.first.send :tax
+
+<% @items.sort.map do |item| %>
+
+floor округление

@@ -26,3 +26,60 @@ history
 
 echo
 перемещения некоторых данных в файл. echo Здравствуйте, меня зовут Джон >> name.txt.
+
+bundle init
+
+sudo -i -u postgres
+psql
+\du
+\l
+\q
+ctrl + shift + d logout
+
+bundle exec rake db:create
+rails db:migrate && rails db:migrate RAILS_ENV=test
+rails db:rollback
+rails db:drop
+rails db:migrate:reset
+
+Item.where(name: 'Dasha').update(name: 'Sasha')  #in irb rails
+Item.where(name: 'Sasha').destroy_all            #in irb rails
+ctrl + shift + d выход из binding.pry
+yarn add bootstrap@4.3.1 jquery popper.js
+
+rails g rspec:install
+rspec --init
+--color
+--format doc
+
+lsof -wni tcp:3000        #kill server
+kill -9 <pid>
+
+git checkout -b name_branch
+git log --pretty=format:"%h - %an, %ar : %s"
+git log --since=1.week
+
+rails _2.1.0_ new rails-course --api --database=postgresql
+bundle exec rake assets:precompile RAILS_ENV=production
+rm config/credentials.yml.enc
+EDITOR="nano" rails credentials:edit
+rm config/master.key
+rubocop -D -a --only Layout/EmptyLinesAroundClassBody
+nvim .rubokop.yml
+
+heroku config:set RAILS_MASTER_KEY=717e70b697782989dfecb3778c22c51b
+heroku config:set RAILS_MASTER_KEY=`cat config/master.key`
+heroku git:remote -a ror-dev-4-code
+
+
+rails generate devise:install
+rails g cancan:ability
+rails generate active_admin:install
+
+
+Ctrl + Alt + I	Авто-отступ линии
+Ctrl + D	Дублирование строки
+Ctrl + Delete	Удалить слово после каретки
+Ctrl + F4	Закрыть активное окно редактора
+Alt + Right/Left	Переход к следующей / предыдущей вкладки редактора
+Ctrl + E	Последние файлы
